@@ -16,11 +16,6 @@
 		<link href="main.css" rel="stylesheet">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 		<script src="removeteammember.js"></script>
-		<script>
-			function goBack() {
-			  window.history.back();
-			}
-		</script>
 	
 	</head>
   <body>
@@ -51,6 +46,7 @@
         <div class="row">
 			<div class="col-lg-2">
 				<div id="mySidenav" class="sidenav">
+				<a href="#" onclick="window.location='main.html'">Team Dashboard</a>
 				<a href="#" onclick="window.location='leaveinfo.html'">Enter Leave</a>
 				<a href="#" onclick="window.location='contactinfo.html'">Update Contact Information</a>
 				<a href="#" onclick="window.location='addteammember.html'">Add New Team Member</a>
@@ -68,9 +64,10 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group">
-							<select class="form-control" id="type" required>
+							<select id="teamList" class="form-control" id="type" required>
 								<option></option>
 								<option>Team #1</option>
+								<option>Team #2</option>
 							</select>
 						</div>
 					</div>
@@ -81,22 +78,14 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group">
-							<select class="form-control" id="type" required>
-								<option></option>
-								<option>John</option>
-								<option>Carl</option>
-								<option>Ava</option>
-								<option>Rick</option>
-								<option>Taylor</option>
-								<option>Dave</option>
-								<option>Ben</option>
-								<option>Kelly</option>
+							<select id="employeeList" class="form-control" id="type" required>
+
 							</select>
 						</div>
 					</div>
 				</div>
 				<button class="btn btn-lg btn-primary grey-background black btn-grey-hover" onclick="goBack()">Back</button>
-				<button class="btn btn-lg btn-primary navy-background white btn-hover" type="submit">Submit</button>
+				<button class="btn btn-lg btn-primary navy-background white btn-hover" type="submit" onclick="onSumbit()">Submit</button>
 				</form>
 			</div>
 		</div>

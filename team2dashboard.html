@@ -15,15 +15,9 @@
 		<!-- Custom styles for this template -->
 		<link href="main.css" rel="stylesheet">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-		
-		<script>
-			function goBack() {
-			  window.history.back();
-			}
-		</script>
-	
+		<script src="team2dashboard.js"></script>
 	</head>
-  <body>
+	<body>
 		<div class="navbar-header fixed-top ">
 			<div id= 'about' style="background:navy;width:100%;top:50px;padding:10px 0;">
 				<div style="text-align:center;display:inline-block;width:90%;">
@@ -58,18 +52,57 @@
 				<a href="#" onclick="window.location='removeteammember.html'">Remove Team Member</a>
 				</div>
 			</div>
-			<div class="col-lg-8">
-				<div class="row">
-					<h2 class="h3 mb-3 font-weight-normal"><u>Remove Team Member</u></h2>
+			<div>
+				<h2>Team: Team #1</h2>
+				<div>
+					<div style="display:inline-block;">
+						<input id="datePicker" type="date">
+					</div>
+					<div style="display:inline-block;">
+						<label>Status</label>
+						<div style="display:inline-block;">
+							<select id="statusFilter" class="form-control" id="type" required>
+								<option>All</option>
+								<option>In-Office</option>
+								<option>Sick</option>
+								<option>Vacation</option>
+								<option>Working from home</option>
+								<option>Training</option>
+							</select>
+						</div>
+					</div>
 				</div>
-				<div id="test" class="alert alert-success" role="alert" style="margin-top:30px;margin-bottom:30px;" >
-					<i class="fas fa-check-circle" style="color:darkgreen;"></i> Your request has been successfully submitted!
+				<table id="statusTable" width="100%">
+					<tr>
+						<th>Name</th>
+						<th>Status</th>
+						<th>Return Date</th>
+					</tr>
+				</table>
+				<h3>Legend</h3>
+				<div>
+					<img src="in-office25px.png">
+					<div style="display:inline-block;"><label>In-Office</label></div>
 				</div>
-				<button class="btn btn-lg btn-primary grey-background black btn-grey-hover" onclick="window.location='main.html'">Return to Home Page</button>
-				<button class="btn btn-lg btn-primary navy-background white btn-hover" onclick="window.location='removeteammember.html'">Remove Another Team Member</button>
+				<div>
+					<img src="sick25px.png">
+					<div style="display:inline-block;"><label>Sick</label></div>
+				</div>
+				<div>
+					<img src="vacation25px.png">
+					<div style="display:inline-block;"><label>Vacation</label></div>
+				</div>
+				<div>
+					<img src="working-from-home25px.png">
+					<div style="display:inline-block;"><label>Working From Home</label></div>
+				</div>
+				<div>
+					<img src="training25px.png">
+					<div style="display:inline-block;"><label>Training</label></div>
+				</div>
 			</div>
 		</div>
-		</div>
+	  </div>
     </main>
   </body>
 </html>
