@@ -16,11 +16,29 @@
 		<link href="main.css" rel="stylesheet">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 		
-		<script>
-			function goBack() {
-			  window.history.back();
+		<script type="text/javascript" src="leaveinfo.js"></script>
+		
+		<!--<script>
+			var startDate;
+			var startTime;
+			var endDate;
+			var endTime;
+			
+			function validateDateAndTime(){
+				startDate = document.getElementById("startDate").value;
+				startTime = document.getElementById("startTime").value;
+				endDate = document.getElementById("endDate").value;
+				endTime = document.getElementById("endTime").value;
+				
+				if (startDate > endDate) {
+					startDate.setCustomValidity("Leave start date occurs after end date");
+					endDate.setCustomValidity("Leave end date occurs before start date");
+				} else {
+					startDate.setCustomValidity("");
+					endDate.setCustomValidity("");
+				}
 			}
-		</script>
+		</script>-->
 	
 	</head>
   <body>
@@ -64,7 +82,7 @@
 				<div class="row">
 					<p>* Note: This leave information will apply to all teams you currently have access to.</p>
 				</div>
-				<form class="form-signin" method="post" action="main.html">
+				<form class="form-signin" method="get" action="leaveinfoconfirmation.html">
 				<div class="row">
 					<div class="col-lg-3">
 						<h5 class="h5 mb-5 font-weight-normal">Type:</h5>
@@ -87,7 +105,7 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group"> <!-- Date input -->
-							<input type="date" id="startDate" class="form-control" required>
+							<input type="date" id="startDate" class="form-control" onfocusout="validateDateAndTime()" required>
 						</div>
 					</div>
 				</div>
@@ -97,7 +115,7 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group"> <!-- Date input -->
-							<input type="time" id="startTime" class="form-control" required>
+							<input type="time" id="startTime" class="form-control" onfocusout="validateDateAndTime()" required>
 						</div>
 					</div>
 				</div>
@@ -107,7 +125,7 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group"> <!-- Date input -->
-							<input type="date" id="endDate" class="form-control" required>
+							<input type="date" id="endDate" class="form-control" onfocusout="validateDateAndTime()" required>
 						</div>
 					</div>
 				</div>
@@ -117,7 +135,7 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group"> <!-- Date input -->
-							<input type="time" id="endTime" class="form-control" required>
+							<input type="time" id="endTime" class="form-control" onfocusout="validateDateAndTime()" required>
 						</div>
 					</div>
 				</div>
