@@ -29,10 +29,18 @@
 	
 	</head>
   <body>
-	<div class="navbar-header fixed-top ">
-			<div id= 'about' style="background:navy;width: 100%;top: 50px;padding: 10px 0;text-align: center;">
-				<h2 style="color:white;">In-Out Tracking System</h2>
-				<button type="button" class="btn" style="background:#800020 ;position:top;"><i class='fas fa-user' style="color:white;"></i></button>
+		<div class="navbar-header fixed-top ">
+			<div id= 'about' style="background:navy;width:100%;top:50px;padding:10px 0;">
+				<div style="text-align:center;display:inline-block;width:90%;">
+					<h2 style="color:white; text-align:center;">In-Out Tracking System</h2>
+				</div>
+				<!--<div style="text-align:right;display:inline-block;width:3%;">-->
+				<div class="dropdown">
+					<button id="profileBtn" type="button" class="dropbtn btn"><i class='fas fa-user' style="color:white;"></i></button>
+					<div id="profileDropdown" class="dropdown-content">
+						<a href="signin.html">Log Out</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
