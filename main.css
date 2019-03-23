@@ -34,6 +34,9 @@ body {
 .navy-background {background-color:navy;}
 .white {color:white;}
 .btn-hover:hover {background-color: #000048;}
+.grey-background {background-color:Gainsboro;}
+.black {color:black;}
+.btn-grey-hover:hover {background-color: silver;}
 .confirm{background-color:green;}
 
 /* CUSTOMIZE THE CAROUSEL
