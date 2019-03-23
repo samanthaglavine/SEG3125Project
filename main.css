@@ -159,3 +159,18 @@ body {
 
 .show {display:block;}
 
+/* Table backgrounds
+--------------------------------------------- */
+.in-office{background-color:forestgreen; opacity:0.75;}
+.sick{background-color:crimson; opacity:0.75;}
+.training{background-color:royalblue; opacity:0.75;}
+.working-from-home{background-color:mediumvioletred; opacity:0.75;}
+.vacation{background-color:orange; opacity:0.75;}
+
+.in-office, .sick, .training, .working-from-home, .vacation{color:white;}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}

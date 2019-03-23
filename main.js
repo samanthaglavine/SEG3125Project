@@ -27,7 +27,7 @@ function start(){
 		newBtn.classList.add('white');
 		newBtn.classList.add('btn-hover');
 		newBtn.innerHTML = "View dashboard &raquo;";
-		newBtn.href = "#";
+		newBtn.href = "teamdashboard.html";
 		newBtn.role = "button";
 		team2.appendChild(newBtn);
 	}
@@ -62,7 +62,7 @@ window.onclick = function(event) {
 		newBtn.classList.add('white');
 		newBtn.classList.add('btn-hover');
 		newBtn.innerHTML = "View dashboard";
-		newBtn.href = "signin.html";
+		newBtn.href = "teamdashboard.html";
 		newBtn.role = "button";
 		var parent = event.target.parentNode;
 		parent.removeChild(event.target);

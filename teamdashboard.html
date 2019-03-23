@@ -15,15 +15,9 @@
 		<!-- Custom styles for this template -->
 		<link href="main.css" rel="stylesheet">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-		<script src="removeteammember.js"></script>
-		<script>
-			function goBack() {
-			  window.history.back();
-			}
-		</script>
-	
+		<script src="teamdashboard.js"></script>
 	</head>
-  <body>
+	<body>
 		<div class="navbar-header fixed-top ">
 			<div id= 'about' style="background:navy;width:100%;top:50px;padding:10px 0;">
 				<div style="text-align:center;display:inline-block;width:90%;">
@@ -57,49 +51,45 @@
 				<a href="#" onclick="window.location='removeteammember.html'">Remove Team Member</a>
 				</div>
 			</div>
-			<div class="col-lg-8">
-				<div class="row">
-					<h2 class="h3 mb-3 font-weight-normal"><u>Remove Team Member:</u></h2>
-				</div>
-				<form class="form-signin" method="post" action="main.html">
-				<div class="row">
-					<div class="col-lg-3">
-						<h5 class="h5 mb-5 font-weight-normal">Team:</h5>
+			<div>
+				<h2>Team: Team #1</h2>
+				<div>
+					<div style="display:inline-block;">
+						<input id="datePicker" type="date">
 					</div>
-					<div class="col-lg-8">
-						<div class="form-group">
-							<select class="form-control" id="type" required>
-								<option></option>
-								<option>Team #1</option>
+					<div style="display:inline-block;">
+						<label>Status</label>
+						<div style="display:inline-block;">
+							<select id="statusFilter" class="form-control" id="type" required>
+								<option>All</option>
+								<option>In-Office</option>
+								<option>Sick</option>
+								<option>Vacation</option>
+								<option>Working from home</option>
+								<option>Training</option>
 							</select>
 						</div>
 					</div>
 				</div>
+				<table id="statusTable" width="100%">
+					<tr>
+						<th>Name</th>
+						<th>Status</th>
+						<th>Return Date</th>
+					</tr>
+				</table>
+				<h3>Legend</h3>
 				<div class="row">
-					<div class="col-lg-3">
-						<h5 class="h5 mb-5 font-weight-normal">Employee:</h5>
+					<div class="col-lg-2">
+				
 					</div>
-					<div class="col-lg-8">
-						<div class="form-group">
-							<select class="form-control" id="type" required>
-								<option></option>
-								<option>John</option>
-								<option>Carl</option>
-								<option>Ava</option>
-								<option>Rick</option>
-								<option>Taylor</option>
-								<option>Dave</option>
-								<option>Ben</option>
-								<option>Kelly</option>
-							</select>
-						</div>
+					<div class="col-lg-2">
+				
 					</div>
 				</div>
-				<button class="btn btn-lg btn-primary grey-background black btn-grey-hover" onclick="goBack()">Back</button>
-				<button class="btn btn-lg btn-primary navy-background white btn-hover" type="submit">Submit</button>
-				</form>
 			</div>
 		</div>
+	  </div>
     </main>
   </body>
 </html>

@@ -15,15 +15,16 @@
 		<!-- Custom styles for this template -->
 		<link href="main.css" rel="stylesheet">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-		
+		<script src="addteammember.js"></script>
 		<script>
 			function goBack() {
 			  window.history.back();
 			}
 			
 			function successAlert() {
-			alert("here");
-			document.getElementById("test").style.visibility = "visible";
+				alert("here");
+				document.getElementById("mySidenav").style.visibility = "hidden";
+				document.getElementById("test").style.visibility = "visible";
 			}
 		</script>
 	
@@ -66,7 +67,7 @@
 				<div class="row">
 					<h2 class="h3 mb-3 font-weight-normal"><u>Send a Team Request</u></h2>
 				</div>
-				<form class="form-signin" method="post" onsubmit="return successAlert();">
+				<form class="form-signin" method="GET" onsubmit="return successAlert();">
 				<div class="row">
 					<div class="col-lg-3">
 						<h5 class="h5 mb-5 font-weight-normal">Team:</h5>
