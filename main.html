@@ -14,12 +14,14 @@
 
 		<!-- Custom styles for this template -->
 		<link href="main.css" rel="stylesheet">
+		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 	</head>
   <body>
 	<div class="navbar-header fixed-top ">
-			<section id= 'about' style="background:navy;width: 100%;top: 50px;padding: 10px 0;text-align: center;">
+			<div id= 'about' style="background:navy;width: 100%;top: 50px;padding: 10px 0;text-align: center;">
 				<h2 style="color:white;">In-Out Tracking System</h2>
-			</section>
+				<button type="button" class="btn" style="background:#800020 ;position:top;"><i class='fas fa-user' style="color:white;"></i></button>
+			</div>
 		</div>
 
     <main role="main">
@@ -27,24 +29,24 @@
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      <div class="container marketing">
-
+		
+		<div class="container marketing">
+		
         <!-- Three columns of text below the carousel -->
         <div class="row">
-			<div class="col-lg-4">
-				<div id="mySidenav" class="sidenav">
-					<a href="#">About</a>
-					<a href="#">Services</a>
-					<a href="#">Clients</a>
-					<a href="#">Contact</a>
-				</div>
-			</div><!-- /.col-lg-4 -->
+		<div class="col-lg-2">
+			<div id="mySidenav" class="sidenav">
+			<a href="#" onclick="window.location='leaveinfo.html'">Enter Leave</a>
+			<a href="#">Update Contact Information</a>
+			<a href="#">Add New Team Member</a>
+			<a href="#">Remove Team Member</a>
+		</div>
+		</div>
 			<div class="col-lg-4">
 				<img class="rounded-circle" src="imgs/team.png" alt="Generic placeholder image" width="140" height="140" vspace="15">
 				<h2>Team #1</h2>
 				<p>Description...</p>
-				<p><a class="btn btn-secondary navy-background white btn-hover" href="#" role="button" onclick="window.location='immunizationrecord.html'">View dashboard &raquo;</a></p>
+				<p><a class="btn btn-secondary navy-background white btn-hover" href="#" role="button" onclick="window.location='dashboard.html'">View dashboard &raquo;</a></p>
 			</div><!-- /.col-lg-4 -->
 			<div class="col-lg-4">
 				<img class="rounded-circle" src="imgs/team.png" alt="Generic placeholder image" width="140" height="140" vspace="15">
