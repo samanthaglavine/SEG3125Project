@@ -35,6 +35,10 @@ body {
 .white {color:white;}
 .btn-hover:hover {background-color: #000048;}
 
+.grey-background {background-color:Gainsboro;}
+.black {color:black;}
+.btn-grey-hover:hover {background-color: silver;}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
