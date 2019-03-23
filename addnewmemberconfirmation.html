@@ -15,20 +15,10 @@
 		<!-- Custom styles for this template -->
 		<link href="main.css" rel="stylesheet">
 		<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-		<script src="addteammember.js"></script>
+		
 		<script>
 			function goBack() {
 			  window.history.back();
-			}
-			
-			function successAlert() {
-<<<<<<< HEAD
-				alert("here");
-				document.getElementById("mySidenav").style.visibility = "hidden";
-				document.getElementById("test").style.visibility = "visible";
-=======
-			document.getElementById("test").style.visibility = "visible";
->>>>>>> 144bb33973177eb4fc6895ac790ce289cb993aa0
 			}
 		</script>
 	
@@ -71,39 +61,13 @@
 				<div class="row">
 					<h2 class="h3 mb-3 font-weight-normal"><u>Send a Team Request</u></h2>
 				</div>
-				<form class="form-signin" method="get" action="addnewmemberconfirmation.html">
-				<div class="row">
-					<div class="col-lg-3">
-						<h5 class="h5 mb-5 font-weight-normal">Team:</h5>
-					</div>
-					<div class="col-lg-8">
-						<div class="form-group">
-							<select class="form-control" id="type" required>
-								<option></option>
-								<option>Team #1</option>
-							</select>
-						</div>
-					</div>
+				<div id="test" class="alert alert-success" role="alert" style="margin-top:30px;margin-bottom:30px;" >
+					<i class="fas fa-check-circle" style="color:darkgreen;"></i> Your request has been successfully submitted!
 				</div>
-				<div class="row">
-					<div class="col-lg-3">
-						<h5 class="h5 mb-5 font-weight-normal">Employee Email:</h5>
-					</div>
-					<div class="col-lg-8">
-						<div class="form-group">
-							<label for="inputEmail" class="sr-only">Email address</label>
-							<input type="email" id="inputEmail" class="form-control" required>
-						</div>
-					</div>
-				</div>
-				<button class="btn btn-lg btn-primary grey-background black btn-grey-hover" onclick="goBack()">Back</button>
-				<button class="btn btn-lg btn-primary navy-background white btn-hover" type="submit">Submit</button>
-				
-				</form>
-				<div id="test" class="alert alert-success" role="alert" style="margin-top:30px;" hidden>
-					This is a success alert—check it out!
-				</div>
+				<button class="btn btn-lg btn-primary grey-background black btn-grey-hover" onclick="window.location='main.html'">Return to Home Page</button>
+				<button class="btn btn-lg btn-primary navy-background white btn-hover" onclick="window.location='addteammember.html'">Add Another Team Member</button>
 			</div>
+		</div>
 		</div>
     </main>
   </body>
