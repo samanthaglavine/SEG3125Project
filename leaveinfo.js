@@ -1,8 +1,24 @@
 var profileBtn;
+var startDate;
+var endDate;
+var startTime;
+var endTime;
 
 function start(){
 	profileBtn = document.getElementById("profileBtn");
 	profileBtn.addEventListener("click", onProfileBtnClick);
+	
+	startDate = document.getElementById("startDate");
+	startDate.onchange = validateDateAndTime;
+	
+	endDate = document.getElementById("endDate");
+	endDate.onchange = validateDateAndTime;
+	
+	startTime = document.getElementById("startTime");
+	startTime.onchange = validateDateAndTime;
+	
+	endTime = document.getElementById("endTime");
+	endTime.onchange = validateDateAndTime;
 }
 
 //Close all open dropdown menus when the user clicks elsewhere on the page
@@ -23,26 +39,18 @@ function onProfileBtnClick(){
 }
 
 function validateDateAndTime(){
-	var startDate = document.getElementById("startDate");
-	var endDate = document.getElementById("endDate");
-	var startTime = document.getElementById("startTime");
-	var endTime = document.getElementById("endTime");
 	if (startDate.value > endDate.value) {
 		startDate.setCustomValidity("Leave start date occurs after end date");
 		endDate.setCustomValidity("Leave end date occurs before start date");
 	} else {
 		startDate.setCustomValidity("");
 		endDate.setCustomValidity("");
-	}
-	
-	if (startDate.value == endDate.value) {
 		if (startTime.value > endTime.value) {
 			startTime.setCustomValidity("Leave start time occurs after end time");
 		} else {
 			startTime.setCustomValidity("");
 		}
 	}
-	
 }
 
 function goBack() {
