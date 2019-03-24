@@ -68,7 +68,7 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group">
-							<select class="form-control" id="type" required>
+							<select id="typeSelector" class="form-control" id="type" required>
 								<option></option>
 								<option>Sick</option>
 								<option>Vacation</option>
@@ -124,8 +124,8 @@
 					</div>
 					<div class="col-lg-8">
 						<div class="form-group">
-							<select class="form-control" id="type" required>
-								<option></option>
+							<select id="reoccuranceSelector" class="form-control" id="type" required>
+								<option>Never</option>
 								<option>Daily</option>
 								<option>Weekly</option>
 								<option>Bi-weekly</option>
@@ -135,7 +135,7 @@
 					</div>
 				</div>
 				<button class="btn btn-lg btn-primary grey-background black btn-grey-hover" onclick="goBack()">Back</button>
-				<button class="btn btn-lg btn-primary navy-background white btn-hover" type="submit">Submit</button>
+				<button class="btn btn-lg btn-primary navy-background white btn-hover" type="submit" onclick="onSumbit()">Submit</button>
 				</form>
 			</div>
 		</div>

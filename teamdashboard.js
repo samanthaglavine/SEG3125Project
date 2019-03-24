@@ -41,6 +41,11 @@ function start(){
 	statusFilter = document.getElementById("statusFilter");
 	statusFilter.onchange = statusFilterOnChange;
 	
+	var leave = getCookie("leave");
+	if(leave == "true"){
+		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td>Sick</td><td>2019-04-03</td></tr>";
+	}
+	
 	currentTableRows = todayTableRows;
 	
 	statusTable = document.getElementById("statusTable");

@@ -3,6 +3,8 @@ var startDate;
 var endDate;
 var startTime;
 var endTime;
+var typeSelector;
+var reoccuranceSelector;
 
 function start(){
 	profileBtn = document.getElementById("profileBtn");
@@ -19,6 +21,11 @@ function start(){
 	
 	endTime = document.getElementById("endTime");
 	endTime.onchange = validateDateAndTime;
+	
+	typeSelector = document.getElementById("typeSelector");
+	typeSelector.onchange = typeChanged;
+	
+	reoccuranceSelector = document.getElementById("reoccuranceSelector");
 }
 
 //Close all open dropdown menus when the user clicks elsewhere on the page
@@ -51,6 +58,19 @@ function validateDateAndTime(){
 			startTime.setCustomValidity("");
 		}
 	}
+}
+
+function typeChanged(){
+	if(typeSelector.value == "Training" || typeSelector.value == "Working from home"){
+		reoccuranceSelector.disabled = false;
+	}else{
+		reoccuranceSelector.disabled = true;
+		reoccuranceSelector.value = "Never";
+	}
+}
+
+function onSumbit(){
+	document.cookie = "leave=true;";
 }
 
 function goBack() {
