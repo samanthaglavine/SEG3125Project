@@ -7,7 +7,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="favicon.ico">
 
-		<title>In-Out Trakcing System</title>
+		<title>In-Out Tracking System</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,7 @@
 				<div class="dropdown">
 					<button id="profileBtn" type="button" class="dropbtn btn"><i class='fas fa-user' style="color:white;"></i></button>
 					<div id="profileDropdown" class="dropdown-content">
+						<a href="changepassword.html">Change Password</a>
 						<a href="signin.html">Log Out</a>
 					</div>
 				</div>
@@ -42,67 +43,77 @@
 		<div class="container marketing">
 		
         <!-- Three columns of text below the carousel -->
-        <div class="row">
-			<div class="col-lg-2">
-				<div id="mySidenav" class="sidenav">
-				<a href="#" onclick="window.location='main.html'">Team Dashboard</a>
-				<a href="#" onclick="window.location='leaveinfo.html'">Enter Leave</a>
-				<a href="#" onclick="window.location='contactinfo.html'">Update Contact Information</a>
-				<a href="#" onclick="window.location='addteammember.html'">Add New Team Member</a>
-				<a href="#" onclick="window.location='removeteammember.html'">Remove Team Member</a>
-				</div>
-			</div>
-			<div>
-				<h2>Team: Team #1</h2>
-				<div>
-					<div style="display:inline-block;">
-						<input id="datePicker" type="date">
+			<div class="row">
+				<div class="col-lg-2">
+					<div id="mySidenav" class="sidenav">
+						<a href="#" onclick="window.location='main.html'"><img src="imgs/team2.png" width="30px" height="30px"> Team Dashboard</a>
+						<a href="#" onclick="window.location='leaveinfo.html'"><img src="imgs/calendar.png" width="30px" height="30px"> Enter Leave</a>
+						<a href="#" onclick="window.location='addteammember.html'"><img src="imgs/plus.png" width="30px" height="30px"> Add New Team Member</a>
+						<a href="#" onclick="window.location='removeteammember.html'"><img src="imgs/minus.png" width="30px" height="30px"> Remove Team Member</a>
+						<hr>
+						<a href="#" onclick="window.location='contactinfo.html'"><img src="imgs/settings.png" width="30px" height="30px"> Settings</a>
+						<a href="#" onclick="window.location='help.html'"><img src="imgs/help.png" width="30px" height="30px"> Help</a>
 					</div>
-					<div style="display:inline-block;">
-						<label>Status</label>
-						<div style="display:inline-block;">
-							<select id="statusFilter" class="form-control" id="type" required>
-								<option>All</option>
-								<option>In-Office</option>
-								<option>Sick</option>
-								<option>Vacation</option>
-								<option>Working from home</option>
-								<option>Training</option>
-							</select>
+				</div>
+				<div class="col-lg-10">
+					<div align="center" width="100%">
+						<img class="rounded-circle" src="imgs/eagle.jpg" alt="Generic placeholder image" width="140" height="140" vspace="15">
+						<h2 style="margin-bottom:15px;">AQUILA</h2>
+					</div>
+					<div>
+						<div style="display:inline-block;width:39%;">
+							<label>Viewing Date: <label>
+							<input id="datePicker" type="date" class="form-control">
+						</div>
+						<div style="display:inline-block;width:60%;" align="right">
+							<label>Status:</label>
+							<div style="display:inline-block;">
+								<select id="statusFilter" class="form-control" id="type" required>
+									<option>All</option>
+									<option>In-Office</option>
+									<option>Sick</option>
+									<option>Vacation</option>
+									<option>Working from home</option>
+									<option>Training</option>
+								</select>
+							</div>
 						</div>
 					</div>
-				</div>
-				<table id="statusTable" width="100%">
-					<tr>
-						<th>Name</th>
-						<th>Status</th>
-						<th>Return Date</th>
-					</tr>
-				</table>
-				<h3>Legend</h3>
-				<div>
-					<img src="in-office25px.png">
-					<div style="display:inline-block;"><label>In-Office</label></div>
-				</div>
-				<div>
-					<img src="sick25px.png">
-					<div style="display:inline-block;"><label>Sick</label></div>
-				</div>
-				<div>
-					<img src="vacation25px.png">
-					<div style="display:inline-block;"><label>Vacation</label></div>
-				</div>
-				<div>
-					<img src="working-from-home25px.png">
-					<div style="display:inline-block;"><label>Working From Home</label></div>
-				</div>
-				<div>
-					<img src="training25px.png">
-					<div style="display:inline-block;"><label>Training</label></div>
+					<table id="statusTable" width="100%">
+						<tr>
+							<th>Name</th>
+							<th>Status</th>
+							<th>Return Time</th>
+							<th>Return Date</th>
+							
+						</tr>
+					</table>
+					<details>
+						<summary>Legend</summary>
+						<div>
+							<img src="imgs/in-office25px.png">
+							<div style="display:inline-block;"><label>In-Office</label></div>
+						</div>
+						<div>
+							<img src="imgs/sick25px.png">
+							<div style="display:inline-block;"><label>Sick</label></div>
+						</div>
+						<div>
+							<img src="imgs/vacation25px.png">
+							<div style="display:inline-block;"><label>Vacation</label></div>
+						</div>
+						<div>
+							<img src="imgs/working-from-home25px.png">
+							<div style="display:inline-block;"><label>Working From Home</label></div>
+						</div>
+						<div>
+							<img src="imgs/training25px.png">
+							<div style="display:inline-block;"><label>Training</label></div>
+						</div>
+					</details>
 				</div>
 			</div>
 		</div>
-	  </div>
     </main>
   </body>
 </html>

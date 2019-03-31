@@ -2,19 +2,20 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body {
+main {
   padding-top: 8rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
 
 .sidenav {
-  height: 400px;
-  width: 200px;
+  height: 100%;
+  width: 300px;
   position: fixed;
   left:0;
-  background-color: navy;
+  background-color: #dddddd;
   overflow-x: hidden;
+  margin-top:-4rem;
   padding-top: 40px;
 }
 
@@ -22,13 +23,13 @@ body {
   padding: 8px 8px 8px 45px;
   text-decoration: none;
   font-size: 18px;
-  color: white;
+  color: black;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #AEAEBD;
+  background-color: #AEAEBD;
 }
 
 .navy-background {background-color:navy;}
@@ -133,6 +134,7 @@ body {
   float: right;
   position: relative;
   display: inline-block;
+  margin-right:30px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -161,16 +163,27 @@ body {
 
 /* Table backgrounds
 --------------------------------------------- */
-.in-office{background-color:forestgreen; opacity:0.75;}
+/*.in-office{background-color:forestgreen; opacity:0.75;}
 .sick{background-color:crimson; opacity:0.75;}
 .training{background-color:royalblue; opacity:0.75;}
 .working-from-home{background-color:mediumvioletred; opacity:0.75;}
-.vacation{background-color:orange; opacity:0.75;}
+.vacation{background-color:orange; opacity:0.75;}*/
 
-.in-office, .sick, .training, .working-from-home, .vacation{color:white;}
+.in-office, .sick, .training, .working-from-home, .vacation{color:black;}
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #000000;
   text-align: left;
   padding: 8px;
+  width: 25%;
+}
+tr:nth-child() {
+  background-color: #dddddd;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+hr {
+	width:80%;
 }

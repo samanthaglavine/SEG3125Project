@@ -7,7 +7,7 @@
 		<meta name="author" content="">
 		<link rel="icon" href="favicon.ico">
 
-		<title>In-Out Trakcing System</title>
+		<title>In-Out Tracking System</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,7 @@
 				<div class="dropdown">
 					<button id="profileBtn" type="button" class="dropbtn btn"><i class='fas fa-user' style="color:white;"></i></button>
 					<div id="profileDropdown" class="dropdown-content">
+						<a href="changepassword.html">Change Password</a>
 						<a href="signin.html">Log Out</a>
 					</div>
 				</div>
@@ -41,31 +42,31 @@
 		
 		<div class="container marketing">
 		
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-			<div class="col-lg-2">
-				<div id="mySidenav" class="sidenav">
-				<a href="#" onclick="window.location='main.html'">Team Dashboard</a>
-				<a href="#" onclick="window.location='leaveinfo.html'">Enter Leave</a>
-				<a href="#" onclick="window.location='contactinfo.html'">Update Contact Information</a>
-				<a href="#" onclick="window.location='addteammember.html'">Add New Team Member</a>
-				<a href="#" onclick="window.location='removeteammember.html'">Remove Team Member</a>
+			<!-- Three columns of text below the carousel -->
+			<div class="row">
+				<div class="col-lg-2">
+					<div id="mySidenav" class="sidenav">
+						<a href="#" onclick="window.location='main.html'"><img src="imgs/team2.png" width="30px" height="30px"> Team Dashboard</a>
+						<a href="#" onclick="window.location='leaveinfo.html'"><img src="imgs/calendar.png" width="30px" height="30px"> Enter Leave</a>
+						<a href="#" onclick="window.location='addteammember.html'"><img src="imgs/plus.png" width="30px" height="30px"> Add New Team Member</a>
+						<a href="#" onclick="window.location='removeteammember.html'"><img src="imgs/minus.png" width="30px" height="30px"> Remove Team Member</a>
+						<hr>
+						<a href="#" onclick="window.location='contactinfo.html'"><img src="imgs/settings.png" width="30px" height="30px"> Settings</a>
+						<a href="#" onclick="window.location='help.html'"><img src="imgs/help.png" width="30px" height="30px"> Help</a>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<img class="rounded-circle" src="imgs/swanicon1.jpg" alt="Generic placeholder image" width="140" height="140" vspace="15">
+					<h2 style="margin-bottom:15px;">CYGNUS</h2>
+					<p><a class="btn btn-secondary navy-background white btn-hover" href="teamdashboard.html" role="button" onclick="window.location='dashboard.html'">View dashboard &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+				<div class="col-lg-4">
+					<img class="rounded-circle" src="imgs/eagle.jpg" alt="Generic placeholder image" width="140" height="140" vspace="15">
+					<h2 style="margin-bottom:15px;">AQUILA</h2>
+					<p id="team2"></p>
 				</div>
 			</div>
-			<div class="col-lg-4">
-				<img class="rounded-circle" src="imgs/team.png" alt="Generic placeholder image" width="140" height="140" vspace="15">
-				<h2>Team #1</h2>
-				<p>Description...</p>
-				<p><a class="btn btn-secondary navy-background white btn-hover" href="teamdashboard.html" role="button" onclick="window.location='dashboard.html'">View dashboard &raquo;</a></p>
-			</div><!-- /.col-lg-4 -->
-			<div class="col-lg-4">
-				<img class="rounded-circle" src="imgs/team.png" alt="Generic placeholder image" width="140" height="140" vspace="15">
-				<h2>Team #2</h2>
-				<p>Description...</p>
-				<p id="team2"></p>
-			</div>
-        </div>
-      </div>
+		</div>
     </main>
   </body>
 </html>

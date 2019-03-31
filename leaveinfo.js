@@ -11,15 +11,29 @@ function start(){
 	profileBtn.addEventListener("click", onProfileBtnClick);
 	
 	startDate = document.getElementById("startDate");
+	today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+	today = yyyy + '-' + mm + '-' + dd;
+	startDate.value = today;
 	startDate.onchange = validateDateAndTime;
 	
 	endDate = document.getElementById("endDate");
+	today = new Date();
+	var dd = String(today.getDate()+1).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = today.getFullYear();
+	today = yyyy + '-' + mm + '-' + dd;
+	endDate.value = today;
 	endDate.onchange = validateDateAndTime;
 	
 	startTime = document.getElementById("startTime");
+	startTime.value = "08:00:00";
 	startTime.onchange = validateDateAndTime;
 	
 	endTime = document.getElementById("endTime");
+	endTime.value = "08:00:00";
 	endTime.onchange = validateDateAndTime;
 	
 	typeSelector = document.getElementById("typeSelector");

@@ -3,24 +3,24 @@ var statusTable;
 var datePicker;
 var statusFilter;
 var today;
-var tableHeaders = "<tr><th>Name</th><th>Status</th><th>Return Date</th></tr>";
-var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Collette, Ben</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"sick\"><td>Eilenburg, Dave</td><td>Sick</td><td>2019-04-03</td></tr>"
-, "<tr class=\"in-office\"><td>Korrick, Ava</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td>Vacation</td><td>2019-05-03</td></tr>"
-, "<tr class=\"working-from-home\"><td>Romer, Carl</td><td>Working from home</td><td>2019-04-03</td></tr>"
-, "<tr class=\"in-office\"><td>John, Smith</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"training\"><td>Veeh, Kelly</td><td>Training</td><td>2019-04-03</td></tr>"];
+var tableHeaders = "<tr><th>Name</th><th>Status</th><th>Return Time</th><th>Return Date</th></tr>";
+var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Collette, Ben</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"sick\"><td>Eilenburg, Dave</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td>8:00 AM</td><td>04-03-2019</td></tr>"
+, "<tr class=\"in-office\"><td>Korrick, Ava</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td><img src=\"imgs/vacation25px.png\"> Vacation</td><td>8:00 AM</td><td>05-03-2019</td></tr>"
+, "<tr class=\"working-from-home\"><td>Romer, Carl</td><td><img src=\"imgs/working-from-home25px.png\"> Working from home</td><td>8:00 AM</td><td>04-03-2019</td></tr>"
+, "<tr class=\"in-office\"><td>John, Smith</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"training\"><td>Veeh, Kelly</td><td><img src=\"imgs/training25px.png\"> Training</td><td>12:00 PM</td><td>04-03-2019</td></tr>"];
 
-var tomorrowTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Collette, Ben</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Eilenburg, Dave</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Korrick, Ava</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td>Vacation</td><td>2019-05-03</td></tr>"
-, "<tr class=\"in-office\"><td>Romer, Carl</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>John, Smith</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Veeh, Kelly</td><td>In-Office</td><td></td></tr>"];
+var tomorrowTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Collette, Ben</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Eilenburg, Dave</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Korrick, Ava</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td><img src=\"imgs/vacation25px.png\"> Vacation</td><td>8:00 AM</td><td>05-03-2019</td></tr>"
+, "<tr class=\"in-office\"><td>Romer, Carl</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>John, Smith</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Veeh, Kelly</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"];
 
 var currentTableRows;
 
@@ -43,7 +43,7 @@ function start(){
 	
 	var leave = getCookie("leave");
 	if(leave == "true"){
-		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td>Sick</td><td>2019-04-03</td></tr>";
+		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td>8:00 AM</td><td>04-03-2019</td></tr>";
 	}
 	
 	currentTableRows = todayTableRows;
@@ -63,7 +63,7 @@ function start(){
 		}
 	}
 	
-	statusTable.innerHTML += todayTableRows.join('');
+	statusTable.innerHTML = tableHeaders + todayTableRows.join('');
 }
 
 function statusFilterOnChange(){

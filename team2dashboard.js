@@ -3,15 +3,15 @@ var statusTable;
 var datePicker;
 var statusFilter;
 var today;
-var tableHeaders = "<tr><th>Name</th><th>Status</th><th>Return Date</th></tr>";
+var tableHeaders = "<tr><th>Name</th><th>Status</th><th>Return Time</th><th>Return Date</th></tr>";
 
-var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Doe, Jane</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Raynor, Rick</td><td>In-Office</td><td></td></tr>"];
+var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Doe, Jane</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Raynor, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"];
 
-var tomorrowTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Doe, Jane</td><td>In-Office</td><td></td></tr>"
-, "<tr class=\"in-office\"><td>Raynor, Rick</td><td>In-Office</td><td></td></tr>"];
+var tomorrowTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Doe, Jane</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Raynor, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"];
 
 var currentTableRows;
 
@@ -34,7 +34,7 @@ function start(){
 	
 	var leave = getCookie("leave");
 	if(leave == "true"){
-		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td>Sick</td><td>2019-04-03</td></tr>";
+		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td></td>8:00 AM<td>04-03-2019</td></tr>";
 	}
 	
 	currentTableRows = todayTableRows;
@@ -54,7 +54,7 @@ function start(){
 		}
 	}
 	
-	statusTable.innerHTML += todayTableRows.join('');
+	statusTable.innerHTML = tableHeaders + todayTableRows.join('');
 }
 
 function statusFilterOnChange(){

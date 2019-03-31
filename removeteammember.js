@@ -2,7 +2,6 @@ var profileBtn;
 var employeeList;
 var teamList;
 var team1Options = ["<option></option>"
-,"<option>Astley, Rick</option>"
 ,"<option>Collette, Ben</option>"
 ,"<option>Eilenburg, Dave</option>"
 ,"<option>Korrick, Ava</option>"
@@ -12,7 +11,6 @@ var team1Options = ["<option></option>"
 ,"<option>Kelly, Veeh</option>"];
 
 var team2Options = ["<option></option>"
-,"<option>Astley, Rick</option>"
 ,"<option>Doe, Jane</option>"
 ,"<option>Raynor, Jim</option>"];
 
@@ -41,10 +39,10 @@ function start(){
 }
 
 function teamListChange(){
-	if(teamList.value == "Team #1"){
+	if(teamList.value == "CYGNUS"){
 		employeeList.innerHTML = team1Options.join("");
 	}
-	else if(teamList.value == "Team #2"){
+	else if(teamList.value == "AQUILA"){
 		employeeList.innerHTML = team2Options.join("");
 	}
 }
