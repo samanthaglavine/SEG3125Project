@@ -39,6 +39,9 @@ main {
 .black {color:black;}
 .btn-grey-hover:hover {background-color: silver;}
 .confirm{background-color:green;}
+.btn.disabled, .btn:disabled {
+    opacity: 1;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

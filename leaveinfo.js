@@ -83,7 +83,7 @@ function typeChanged(){
 	}
 }
 
-function onSumbit(){
+function onSubmit(){
 	document.cookie = "leave=true;";
 }
 

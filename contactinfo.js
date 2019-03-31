@@ -22,4 +22,8 @@ function onProfileBtnClick(){
 	document.getElementById("profileDropdown").classList.toggle("show");
 }
 
+function goBack() {
+	window.history.back();
+}
+
 window.onload = start;
