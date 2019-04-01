@@ -14,7 +14,7 @@ function start(){
 		newBtn.classList.add('btn');
 		newBtn.classList.add('btn-secondary');
 		newBtn.classList.add('confirm');
-		newBtn.innerHTML = "Confirm Team Request &raquo;";
+		newBtn.innerHTML = "Confirm Team Request";
 		newBtn.href="#";
 		newBtn.role = "button";
 		team2.appendChild(newBtn);
@@ -26,7 +26,7 @@ function start(){
 		newBtn.classList.add('navy-background');
 		newBtn.classList.add('white');
 		newBtn.classList.add('btn-hover');
-		newBtn.innerHTML = "View dashboard &raquo;";
+		newBtn.innerHTML = "View dashboard";
 		newBtn.href = "team2dashboard.html";
 		newBtn.role = "button";
 		team2.appendChild(newBtn);
@@ -36,7 +36,7 @@ function start(){
 		newBtn.classList.add('btn');
 		newBtn.classList.add('btn-secondary');
 		newBtn.classList.add('confirm');
-		newBtn.innerHTML = "Confirm Team Request &raquo;";
+		newBtn.innerHTML = "Confirm Team Request";
 		newBtn.href="#";
 		newBtn.role = "button";
 		team2.appendChild(newBtn);
