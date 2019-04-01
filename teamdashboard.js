@@ -6,18 +6,18 @@ var today;
 var tableHeaders = "<tr><th>Name</th><th>Status</th><th>Return Time</th><th>Return Date</th></tr>";
 var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>Collette, Ben</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
-, "<tr class=\"sick\"><td>Eilenburg, Dave</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td>8:00 AM</td><td>04-03-2019</td></tr>"
+, "<tr class=\"sick\"><td>Eilenburg, Dave</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td>8:00 AM</td><td>2019-04-04</td></tr>"
 , "<tr class=\"in-office\"><td>Korrick, Ava</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
-, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td><img src=\"imgs/vacation25px.png\"> Vacation</td><td>8:00 AM</td><td>05-03-2019</td></tr>"
-, "<tr class=\"working-from-home\"><td>Romer, Carl</td><td><img src=\"imgs/working-from-home25px.png\"> Working from home</td><td>8:00 AM</td><td>04-03-2019</td></tr>"
+, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td><img src=\"imgs/vacation25px.png\"> Vacation</td><td>8:00 AM</td><td>2019-05-04</td></tr>"
+, "<tr class=\"working-from-home\"><td>Romer, Carl</td><td><img src=\"imgs/working-from-home25px.png\"> Working from home</td><td>8:00 AM</td><td>2019-04-04</td></tr>"
 , "<tr class=\"in-office\"><td>John, Smith</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
-, "<tr class=\"training\"><td>Veeh, Kelly</td><td><img src=\"imgs/training25px.png\"> Training</td><td>12:00 PM</td><td>04-03-2019</td></tr>"];
+, "<tr class=\"training\"><td>Veeh, Kelly</td><td><img src=\"imgs/training25px.png\"> Training</td><td>12:00 PM</td><td>2019-04-04</td></tr>"];
 
 var tomorrowTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>Collette, Ben</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>Eilenburg, Dave</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>Korrick, Ava</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
-, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td><img src=\"imgs/vacation25px.png\"> Vacation</td><td>8:00 AM</td><td>05-03-2019</td></tr>"
+, "<tr class=\"vacation\"><td>Parzen, Taylor</td><td><img src=\"imgs/vacation25px.png\"> Vacation</td><td>8:00 AM</td><td>2019-05-04</td></tr>"
 , "<tr class=\"in-office\"><td>Romer, Carl</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>John, Smith</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>Veeh, Kelly</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"];
@@ -43,7 +43,7 @@ function start(){
 	
 	var leave = getCookie("leave");
 	if(leave == "true"){
-		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td>8:00 AM</td><td>04-03-2019</td></tr>";
+		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td>8:00 AM</td><td>2019-04-04</td></tr>";
 	}
 	
 	currentTableRows = todayTableRows;

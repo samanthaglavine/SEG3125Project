@@ -34,7 +34,7 @@ function start(){
 	
 	var leave = getCookie("leave");
 	if(leave == "true"){
-		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td></td>8:00 AM<td>04-03-2019</td></tr>";
+		todayTableRows[0] = "<tr class=\"sick\"><td>Astley, Rick</td><td><img src=\"imgs/sick25px.png\"> Sick</td><td></td>8:00 AM<td>2019-04-04</td></tr>";
 	}
 	
 	currentTableRows = todayTableRows;
