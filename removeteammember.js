@@ -8,7 +8,7 @@ var team1Options = ["<option></option>"
 ,"<option>Parzen, Taylor</option>"
 ,"<option>Romer, Carl</option>"
 ,"<option>Smith, John</option>"
-,"<option>Kelly, Veeh</option>"];
+,"<option>Veeh, Kelly</option>"];
 
 var team2Options = ["<option></option>"
 ,"<option>Doe, Jane</option>"
