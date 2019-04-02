@@ -1,9 +1,16 @@
 var profileBtn;
 var statusTable;
 var datePicker;
+var timePicker;
 var statusFilter;
 var today;
+var time;
+
 var tableHeaders = "<tr><th>Name</th><th>Status</th><th>Return Time</th><th>Return Date</th></tr>";
+
+var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Doe, Jane</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
+, "<tr class=\"in-office\"><td>Raynor, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"];
 
 var todayTableRows = ["<tr class=\"in-office\"><td>Astley, Rick</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
 , "<tr class=\"in-office\"><td>Doe, Jane</td><td><img src=\"imgs/in-office25px.png\"> In-Office</td><td></td><td></td></tr>"
@@ -23,11 +30,17 @@ function start(){
 	datePicker = document.getElementById("datePicker");
 	today = new Date();
 	var dd = String(today.getDate()).padStart(2, '0');
-	var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var mm = String(today.getMonth() + 1).padStart(2, '0');
+	var hh = String(today.getHours());
+	var mins = String(today.getMinutes());
 	var yyyy = today.getFullYear();
 	today = yyyy + '-' + mm + '-' + dd;
 	datePicker.value = today;
 	datePicker .onchange = datePickerOnChange;
+	
+	timePicker = document.getElementById("timePicker");
+	timePicker.value = hh + ':' + mins;
+	timePicker.onchange = timePickerChange;
 	
 	statusFilter = document.getElementById("statusFilter");
 	statusFilter.onchange = statusFilterOnChange;
@@ -74,11 +87,13 @@ function statusFilterOnChange(){
 function datePickerOnChange(){
 	if(datePicker.value > today){
 		currentTableRows = tomorrowTableRows;
-		statusTable.innerHTML = tableHeaders + currentTableRows.join('');
 	}else{
 		currentTableRows = todayTableRows;
-		statusTable.innerHTML = tableHeaders + currentTableRows.join('');
 	}
+	statusFilterOnChange();
+}
+
+function timePickerChange(){
 }
 
 //Close all open dropdown menus when the user clicks elsewhere on the page
