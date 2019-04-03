@@ -1,6 +1,7 @@
 var profileBtn;
 var employeeList;
 var teamList;
+var removeForm;
 var team1Options = ["<option></option>"
 ,"<option>Collette, Ben</option>"
 ,"<option>Eilenburg, Dave</option>"
@@ -20,6 +21,7 @@ function start(){
 	employeeList = document.getElementById("employeeList");
 	teamList = document.getElementById("teamList");
 	teamList.onchange = teamListChange;
+	removeForm = document.forms["removeForm"];
 	
 	var deleted = getCookie("deleted").split("/");
 	if(deleted[0] != ""){
@@ -85,11 +87,24 @@ function getCookie(cname) {
 }
 
 function onSumbit(){
-	var deleted = getCookie("deleted");
-	if(deleted == ""){
-		document.cookie = "deleted" + "=" + employeeList.value + ";";
+	/*if(teamList.value == ""){
+		teamList.setCustomValidity('Please select an item in the list.');
+	}else if(employeeList.value == ""){
+		employeeList.setCustomValidity('Please select an item in the list.');
+	}else*/
+	if(confirm("Are you sure you want to remove " + employeeList.value + " from " + teamList.value)){	
+		var deleted = getCookie("deleted");
+		if(deleted == ""){
+			document.cookie = "deleted" + "=" + employeeList.value + ";";
+		}else{
+			document.cookie = "deleted" + "=" + deleted + "/" + employeeList.value + ";";
+		}
+		removeForm.submit();
+		//teamList.setCustomValidity("");
+		//employeeList.setCustomValidity("");
 	}else{
-		document.cookie = "deleted" + "=" + deleted + "/" + employeeList.value + ";";
+		//teamList.setCustomValidity("");
+		//employeeList.setCustomValidity("");
 	}
 }
 
